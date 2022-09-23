@@ -24,7 +24,7 @@ kfir charki gaming edited psych engine and made this one
 * Saw (M.A. Jigsaw) - All the things needed for this engine to support android
 _____________________________________
 
-# Features
+# psych Features
 
 ## Attractive animated dialogue boxes:
 
