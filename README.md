@@ -1,17 +1,15 @@
 # Friday Night Funkin' - kfir Engine is in its beta so if you want to try it and edit it do it.
-Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
 
-Follow a Friday Night Funkin' source code compilation tutorial, after this you will need to install LuaJIT.
-
-If you get an error about StatePointer when using Lua, run `haxelib remove linc_luajit` into CMD/PowerShell, then re-install linc_luajit.
 _____________________________________
 
-## Credits:
+kfir charki gaming edited psych engine and made this one
+
+## Credits psych engine:
 * Shadow Mario - Programmer
 * RiverOaken - Artist
 * Yoshubs - Assistant Programmer
 
-### Special Thanks
+### Special Thanks psych engine
 * bbpanzu - Ex-Programmer
 * shubs - New Input System
 * SqirraRNG - Crash Handler and Base code for Chart Editor's Waveform
@@ -37,13 +35,12 @@ _____________________________________
 * Probably one of the main points of this engine, you can code in .lua files outside of the source code, making your own weeks without even messing with the source!
 * Comes with a Mod Organizing/Disabling Menu.
 
-Some code is used from Joalor64 Engine
 
-hscripts support
+characters in main menu from json
 
-characters in main menu
+More options for title state from json
 
-## Atleast one change to every week:
+## Atleast one change to every week(psych engine):
 ### Week 1:
   * New Dad Left sing sprite
   * Unused stage lights are now used
@@ -63,7 +60,7 @@ characters in main menu
 ### Week 6:
   * On Thorns, the HUD is hidden during the cutscene
   * Also there's the Background girls being spooky during the "Hey!" parts of the Instrumental
-
+Psych engine stuff:
 ## Cool new Chart Editor changes and countless bug fixes
 ![](https://github.com/ShadowMario/FNF-PsychEngine/blob/main/docs/img/chart.png?raw=true)
 * You can now chart "Event" notes, which are bookmarks that trigger specific actions that usually were hardcoded on the vanilla version of the game.
