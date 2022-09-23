@@ -736,7 +736,7 @@ class TitleState extends MusicBeatState
 			}
 		}
 	}
-
+}
 	var skippedIntro:Bool = false;
 	var increaseVolume:Bool = false;
 	function skipIntro():Void
