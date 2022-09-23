@@ -33,9 +33,6 @@ class ExtraMenuState extends MusicBeatState
 	private var camAchievement:FlxCamera;
 	
 	var optionShit:Array<String> = [
-		'stare',
-		'carol',
-                 'face-him',
                  'credits',
                  'awards'
 	];
