@@ -52,7 +52,7 @@ class WeekData {
 	public static function createWeekFile():WeekFile {
 		var weekFile:WeekFile = {
 			songs: [["Bopeebo", "dad", [146, 113, 253]], ["Fresh", "dad", [146, 113, 253]], ["Dad Battle", "dad", [146, 113, 253]]],
-			weekCharacters: ['dad', 'bf', 'gf'],
+			weekCharacters: ['dad', 'bf', 'gf', 'character4', 'character5', 'character6'],
 			weekBackground: 'stage',
 			weekBefore: 'tutorial',
 			storyName: 'Your New Week',
