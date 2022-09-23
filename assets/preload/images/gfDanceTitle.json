@@ -1,10 +1,12 @@
 {	
-	"titlex":-150,
-	"titley":-100,
+	"titlex":512,
+	"titley":-6,
 	"startx":100,
 	"starty":576,
-	"gfx":512,
-	"gfy":40,
-	"backgroundSprite":"",
+		"gfx":-200,
+	    "gfy":-400,
+	"backgroundSprite":"mazeBG",
+	"character":"",
+	"animation":"",
 	"bpm":102
 }
