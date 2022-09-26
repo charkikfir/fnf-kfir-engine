@@ -20,7 +20,7 @@ class PauseSubState extends MusicBeatSubstate
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Change Difficulty' #if android, 'Chart Editor' #end, 'Exit to menu'];
+	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Gameplay Settings', 'Change Difficulty' #if android, 'Chart Editor' #end, 'Exit to menu'];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
@@ -265,6 +265,8 @@ class PauseSubState extends MusicBeatSubstate
 				case 'Chart Editor':
 					MusicBeatState.switchState(new editors.ChartingState());
 					PlayState.chartingMode = true;
+                                case 'Gameplay Settings':
+					openSubState(new GameplayChangersSubstate());
 				case "Exit to menu":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
