@@ -266,6 +266,10 @@ class PauseSubState extends MusicBeatSubstate
 					MusicBeatState.switchState(new editors.ChartingState());
 					PlayState.chartingMode = true;
                                 case 'Gameplay Settings':
+                                    #if android
+			            removeVirtualPad();
+			            #end
+			            persistentUpdate = false;
 					openSubState(new GameplayChangersSubstate());
 				case "Exit to menu":
 					PlayState.deathCounter = 0;
