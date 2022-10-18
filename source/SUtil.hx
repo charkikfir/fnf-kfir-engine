@@ -1,10 +1,10 @@
 package;
 
 #if android
-import android.Hardware;
 import android.Permissions;
 import android.os.Build.VERSION;
 import android.os.Environment;
+import android.Hardware;
 #end
 import flash.system.System;
 import flixel.FlxG;
