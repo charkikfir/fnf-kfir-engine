@@ -4,7 +4,7 @@ package;
 import android.Permissions;
 import android.os.Build.VERSION;
 import android.os.Environment;
-import android.android.Hardware;
+import android.Hardware;
 #end
 import flash.system.System;
 import flixel.FlxG;
