@@ -177,12 +177,12 @@ class SUtil
 
 			File.saveContent(SUtil.getPath() + 'saves/' + fileName + fileExtension, fileData);
 			#if android
-			Hardware.toast("File Saved Successfully!", ToastType.LENGTH_LONG);
+			Hardware.toast("File Saved Successfully!", toast.LENGTH_LONG);
 			#end
 		}
 		#if android
 		catch (e:Dynamic)
-		Hardware.toast("Error!\nClouldn't save the file because:\n" + e, ToastType.LENGTH_LONG);
+		Hardware.toast("Error!\nClouldn't save the file because:\n" + e, toast.LENGTH_LONG);
 		#end
 	}
 
@@ -195,7 +195,7 @@ class SUtil
 		}
 		#if android
 		catch (e:Dynamic)
-		Hardware.toast("Error!\nClouldn't copy the file because:\n" + e, ToastType.LENGTH_LONG);
+		Hardware.toast("Error!\nClouldn't copy the file because:\n" + e, toast.LENGTH_LONG);
 		#end
 	}
 }
