@@ -155,7 +155,7 @@ class SUtil
 			}
 			catch (e:Dynamic)
 				#if android
-				Hardware("Error!\nClouldn't save the crash dump because:\n" + e, 2);
+				Hardware.toast("Error!\nClouldn't save the crash dump because:\n" + e, 2);
 				#end
 
 			System.exit(1);
@@ -171,10 +171,10 @@ class SUtil
 				FileSystem.createDirectory(SUtil.getPath() + 'saves');
 
 			File.saveContent(SUtil.getPath() + 'saves/' + fileName + fileExtension, fileData);
-			Hardware("File Saved Successfully!", 2);
+			Hardware.toast("File Saved Successfully!", 2);
 		}
 		catch (e:Dynamic)
-			Hardware("Error!\nClouldn't save the file because:\n" + e, 2);
+			Hardware.toast("Error!\nClouldn't save the file because:\n" + e, 2);
 	}
 
 	public static function copyContent(copyPath:String, savePath:String)
@@ -185,7 +185,7 @@ class SUtil
 				File.saveBytes(savePath, OpenFlAssets.getBytes(copyPath));
 		}
 		catch (e:Dynamic)
-			Hardware("Error!\nClouldn't copy the file because:\n" + e, 2);
+			Hardware.toast("Error!\nClouldn't copy the file because:\n" + e, 2);
 	}
 	#end
 }
