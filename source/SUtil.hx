@@ -4,7 +4,7 @@ package;
 import android.Permissions;
 import android.os.Build.VERSION;
 import android.os.Environment;
-import android.Hardware;
+import android.android.Hardware;
 #end
 import flash.system.System;
 import flixel.FlxG;
@@ -155,7 +155,7 @@ class SUtil
 			}
 			catch (e:Dynamic)
 				#if android
-				Hardware.toast("Error!\nClouldn't save the crash dump because:\n" + e, 2);
+				android.Hardware.toast("Error!\nClouldn't save the crash dump because:\n" + e, 2);
 				#end
 
 			System.exit(1);
@@ -171,10 +171,10 @@ class SUtil
 				FileSystem.createDirectory(SUtil.getPath() + 'saves');
 
 			File.saveContent(SUtil.getPath() + 'saves/' + fileName + fileExtension, fileData);
-			Hardware.toast("File Saved Successfully!", 2);
+			android.Hardware.toast("File Saved Successfully!", 2);
 		}
 		catch (e:Dynamic)
-			Hardware.toast("Error!\nClouldn't save the file because:\n" + e, 2);
+			android.Hardware.toast("Error!\nClouldn't save the file because:\n" + e, 2);
 	}
 
 	public static function copyContent(copyPath:String, savePath:String)
@@ -185,7 +185,7 @@ class SUtil
 				File.saveBytes(savePath, OpenFlAssets.getBytes(copyPath));
 		}
 		catch (e:Dynamic)
-			Hardware.toast("Error!\nClouldn't copy the file because:\n" + e, 2);
+			android.Hardware.toast("Error!\nClouldn't copy the file because:\n" + e, 2);
 	}
 	#end
 }
