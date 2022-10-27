@@ -389,7 +389,7 @@ class Controls extends FlxActionSet
 	}
 	#end
 
-	#if android
+	#if mobile
 	public var trackedinputsUI:Array<FlxActionInput> = [];
 	public var trackedinputsNOTES:Array<FlxActionInput> = [];
 
@@ -407,7 +407,7 @@ class Controls extends FlxActionSet
 		action.add(input);
 	}
 
-	public function setHitBox(Hitbox:FlxHitbox) 
+	public function setHitBox(Hitbox:FlxHitbox)
 	{
 		inline forEachBound(Control.NOTE_UP, (action, state) -> addbuttonNOTES(action, Hitbox.buttonUp, state));
 		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbuttonNOTES(action, Hitbox.buttonDown, state));
@@ -459,7 +459,7 @@ class Controls extends FlxActionSet
 		}
 	}
 
-	public function setVirtualPadNOTES(VirtualPad:FlxVirtualPad, DPad:FlxDPadMode, Action:FlxActionMode) 
+	public function setVirtualPadNOTES(VirtualPad:FlxVirtualPad, DPad:FlxDPadMode, Action:FlxActionMode)
 	{
 		switch (DPad)
 		{
@@ -503,7 +503,7 @@ class Controls extends FlxActionSet
 		}
 	}
 
-	public function removeFlxInput(Tinputs:Array<FlxActionInput>)
+	public function removeVirtualControlsInput(Tinputs:Array<FlxActionInput>)
 	{
 		for (action in this.digitalActions)
 		{
