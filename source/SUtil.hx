@@ -1,21 +1,21 @@
 package;
 
 #if android
-import android.Hardware;
 import android.Permissions;
 import android.os.Build;
 import android.os.Environment;
+import android.widget.Toast;
 #end
 import flash.system.System;
 import flixel.FlxG;
-import haxe.CallStack.StackItem;
 import haxe.CallStack;
-import haxe.io.Path;
 import openfl.Lib;
 import openfl.events.UncaughtErrorEvent;
 import openfl.utils.Assets;
+#if (sys && !ios)
 import sys.FileSystem;
 import sys.io.File;
+#end
 
 using StringTools;
 
@@ -42,7 +42,7 @@ class SUtil
 				 * Basically for now i can't force the app to stop while its requesting a android permission, so this makes the app to stop while its requesting the specific permission
 				 */
 				Lib.application.window.alert('If you accepted the permissions you are all good!' + "\nIf you didn't then expect a crash"
-					+ 'Press Ok to see what happens',
+					+ '\nPress Ok to see what happens',
 					'Permissions?');
 			}
 			else
@@ -141,6 +141,7 @@ class SUtil
 
 			errMsg += u.error;
 
+			#if (sys && !ios)
 			try
 			{
 				if (!FileSystem.exists(SUtil.getPath() + 'logs'))
@@ -157,16 +158,17 @@ class SUtil
 			}
 			#if android
 			catch (e:Dynamic)
-			Hardware.toast("Error!\nClouldn't save the crash dump because:\n" + e, ToastType.LENGTH_LONG);
+			Toast.makeText("Error!\nClouldn't save the crash dump because:\n" + e, Toast.LENGTH_LONG);
+			#end
 			#end
 
-			Sys.println(errMsg);
+			println(errMsg);
 			Lib.application.window.alert(errMsg, 'Error!');
-
 			System.exit(1);
 		});
 	}
 
+	#if (sys && !ios)
 	public static function saveContent(fileName:String = 'file', fileExtension:String = '.json',
 			fileData:String = 'you forgot to add something in your code lol')
 	{
@@ -177,12 +179,12 @@ class SUtil
 
 			File.saveContent(SUtil.getPath() + 'saves/' + fileName + fileExtension, fileData);
 			#if android
-			Hardware.toast("File Saved Successfully!", toast.LENGTH_LONG);
+			Toast.makeText("File Saved Successfully!", Toast.LENGTH_LONG);
 			#end
 		}
 		#if android
 		catch (e:Dynamic)
-		Hardware.toast("Error!\nClouldn't save the file because:\n" + e, toast.LENGTH_LONG);
+		Toast.makeText("Error!\nClouldn't save the file because:\n" + e, Toast.LENGTH_LONG);
 		#end
 	}
 
@@ -195,7 +197,18 @@ class SUtil
 		}
 		#if android
 		catch (e:Dynamic)
-		Hardware.toast("Error!\nClouldn't copy the file because:\n" + e, toast.LENGTH_LONG);
+		Toast.makeText("Error!\nClouldn't copy the file because:\n" + e, Toast.LENGTH_LONG);
+		#end
+	}
+	#end
+
+	private static function println(msg:String):Void
+	{
+		#if sys
+		Sys.println(msg);
+		#else
+		// Pass null to exclude the position.
+		haxe.Log.trace(msg, null);
 		#end
 	}
 }
