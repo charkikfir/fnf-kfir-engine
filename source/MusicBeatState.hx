@@ -1,11 +1,5 @@
 package;
 
-#if android
-import android.AndroidControls;
-import android.flixel.FlxVirtualPad;
-import flixel.input.actions.FlxActionInput;
-import flixel.util.FlxDestroyUtil;
-#end
 #if mobile
 import mobile.MobileControls;
 import mobile.flixel.FlxVirtualPad;
