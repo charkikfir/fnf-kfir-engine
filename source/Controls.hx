@@ -773,6 +773,7 @@ class Controls extends FlxActionSet
 	}
 	}
 	#else
+	{
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
 	{
 		#if (haxe >= "4.0.0")
@@ -781,7 +782,7 @@ class Controls extends FlxActionSet
 		forEachBound(control, function(action, state) addKeys(action, keys, state));
 		#end	
 	}
-
+}
 	public function unbindKeys(control:Control, keys:Array<FlxKey>)
 	{
 		#if (haxe >= "4.0.0")
