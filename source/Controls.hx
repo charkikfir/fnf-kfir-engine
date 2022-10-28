@@ -772,6 +772,7 @@ class Controls extends FlxActionSet
 		#end
 	}
 	}
+	
 	#else
 	{
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
