@@ -620,6 +620,7 @@ chBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad
 	}
 	#end
 	}
+}
 
 	#if !mobile
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
