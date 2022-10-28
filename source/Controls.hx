@@ -789,6 +789,7 @@ class Controls extends FlxActionSet
 				#end
 				}
 				}
+				#end
 	static function removeKeys(action:FlxActionDigital, keys:Array<FlxKey>)
 	{
 		var i = action.inputs.length;
