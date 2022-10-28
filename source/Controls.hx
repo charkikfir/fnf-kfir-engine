@@ -772,7 +772,7 @@ class Controls extends FlxActionSet
 		#end
 	}
 	}
-	
+	#end
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
 	{
 		#if (haxe >= "4.0.0")
