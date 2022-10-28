@@ -395,7 +395,6 @@ chBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad
 				inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbuttonNOTES(action, VirtualPad.buttonDown, state));
 				inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonNOTES(action, VirtualPad.buttonLeft, state));
 				inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad.buttonRight, state));
-			}
                 case BOTH_FULL:
 				inline forEachBound(Control.NOTE_UP, (action, state) -> addbuttonNOTES(action, VirtualPad.buttonUp, state));
 				inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbuttonNOTES(action, VirtualPad.buttonDown, state));
@@ -407,7 +406,8 @@ chBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad
 				inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad.buttonRight2, state));
 			case NONE: // do nothing
 		}
-
+   }
+}
 		switch (Action)
 		{
 			case A:
