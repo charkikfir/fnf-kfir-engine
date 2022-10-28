@@ -800,6 +800,7 @@ class Controls extends FlxActionSet
 				action.remove(input);
 		}
 		}
+		#end
 	}
 
 	public function setKeyboardScheme(scheme:KeyboardScheme, reset = true)
