@@ -566,7 +566,8 @@ chBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad
 				}
 			}
 		}
-	}
+	
+}
 	#end
 	override function update()
 	{
@@ -601,7 +602,7 @@ chBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad
 			case NONE: // do nothing
 		}
 	}
-
+}
 	public function removeVirtualControlsInput(Tinputs:Array<FlxActionInput>)
 	{
 		for (action in this.digitalActions)
