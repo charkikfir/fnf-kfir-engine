@@ -782,8 +782,8 @@ class Controls extends FlxActionSet
 		forEachBound(control, function(action, _) removeKeys(action, keys));
 		#end		
 	}	
-	}
 	#end
+	}
 
 	inline static function addKeys(action:FlxActionDigital, keys:Array<FlxKey>, state:FlxInputState)
 	{
