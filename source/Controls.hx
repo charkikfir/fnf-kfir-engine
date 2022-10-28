@@ -788,7 +788,6 @@ class Controls extends FlxActionSet
 				action.addKey(key, state);
 				#end
 				}
-				#end
 				}
 	static function removeKeys(action:FlxActionDigital, keys:Array<FlxKey>)
 	{
