@@ -1,4 +1,4 @@
-package meta;
+package;
 
 import flixel.FlxG;
 import flixel.input.FlxInput;
@@ -48,7 +48,6 @@ enum abstract Action(String) to String from String
 	var BACK = "back";
 	var PAUSE = "pause";
 	var RESET = "reset";
-	var CHEAT = "cheat";
 }
 
 enum Device
@@ -77,7 +76,6 @@ enum Control
 	ACCEPT;
 	BACK;
 	PAUSE;
-	CHEAT;
 }
 
 enum KeyboardScheme
@@ -125,7 +123,6 @@ class Controls extends FlxActionSet
 	var _back = new FlxActionDigital(Action.BACK);
 	var _pause = new FlxActionDigital(Action.PAUSE);
 	var _reset = new FlxActionDigital(Action.RESET);
-	var _cheat = new FlxActionDigital(Action.CHEAT);
 
 	#if (haxe >= "4.0.0")
 	var byName:Map<String, FlxActionDigital> = [];
