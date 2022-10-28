@@ -779,18 +779,16 @@ class Controls extends FlxActionSet
 		#if (haxe >= "4.0.0")
 		inline forEachBound(control, (action, _) -> removeKeys(action, keys));
 		#else
-		forEachBound(control, function(action, _) removeKeys(action, keys));
-		#end		
+		forEachBound(control, function(action, _) removeKeys(action, keys));	
 	}
-#end
 	inline static function addKeys(action:FlxActionDigital, keys:Array<FlxKey>, state:FlxInputState)
 	{
 		for (key in keys)
 			if(key != NONE)
 				action.addKey(key, state);
 				#end
-	}
-	#end
+				}
+				#end
 	static function removeKeys(action:FlxActionDigital, keys:Array<FlxKey>)
 	{
 		var i = action.inputs.length;
