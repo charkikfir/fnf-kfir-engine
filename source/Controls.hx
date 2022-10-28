@@ -738,7 +738,7 @@ class Controls extends FlxActionSet
 		forEachBound(control, function(action, _) removeKeys(action, copyKeys));
 		#end
 	}
-	#else
+	
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
 	{
 		#if (haxe >= "4.0.0")
