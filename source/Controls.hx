@@ -754,9 +754,10 @@ class Controls extends FlxActionSet
 		inline forEachBound(control, (action, _) -> removeKeys(action, keys));
 		#else
 		forEachBound(control, function(action, _) removeKeys(action, keys));
+		}
 		#end
 	}	
-	#end
+	#else
 
 	public function unbindKeys(control:Control, keys:Array<FlxKey>)
 	{
@@ -771,7 +772,7 @@ class Controls extends FlxActionSet
 		forEachBound(control, function(action, _) removeKeys(action, copyKeys));
 		#end
 	}
-	}
+	#end
 	
 	public function unbindKeys(control:Control, keys:Array<FlxKey>)
 	{
