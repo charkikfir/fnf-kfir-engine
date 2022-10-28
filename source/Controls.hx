@@ -781,8 +781,6 @@ class Controls extends FlxActionSet
 		#else
 		forEachBound(control, function(action, _) removeKeys(action, keys));
 		#end		
-	}	
-	#end
 	}
 
 	inline static function addKeys(action:FlxActionDigital, keys:Array<FlxKey>, state:FlxInputState)
@@ -790,8 +788,9 @@ class Controls extends FlxActionSet
 		for (key in keys)
 			if(key != NONE)
 				action.addKey(key, state);
+				#end
 	}
-}
+#end
 	static function removeKeys(action:FlxActionDigital, keys:Array<FlxKey>)
 	{
 		var i = action.inputs.length;
