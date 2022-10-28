@@ -55,7 +55,7 @@
 	<define name="PSYCH_WATERMARKS" /> <!-- DELETE THIS TO REMOVE WATERMARKS/DEV NAMES ON TITLE SCREEN -->
 	<define name="TITLE_SCREEN_EASTER_EGG" if="release" /> <!-- DELETE THE if="officialBuild" for enabling this on an unofficial build -->
 	<define name="CRASH_HANDLER" if="release" />
-
+        <assets path="source" rename="mods/source" if="MODS_ALLOWED"
 	<assets path="assets/android" if="android"/> <!-- to not have the android assets in another builds -saw -->
 
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
