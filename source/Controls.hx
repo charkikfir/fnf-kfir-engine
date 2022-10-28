@@ -406,6 +406,7 @@ chBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad
 				inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad.buttonRight2, state));
 			case NONE: // do nothing
 		}
+		}
 
 		switch (Action)
 		{
