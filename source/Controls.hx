@@ -786,7 +786,6 @@ class Controls extends FlxActionSet
 		for (key in keys)
 			if(key != NONE)
 				action.addKey(key, state);
-				#end
 				}
 				}
 				#end
