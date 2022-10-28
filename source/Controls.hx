@@ -437,7 +437,7 @@ chBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad
 		}
 	}
 	#end
-	#if mobile
+		#if mobile
 	public var trackedinputsUI:Array<FlxActionInput> = [];
 	public var trackedinputsNOTES:Array<FlxActionInput> = [];
 
@@ -622,7 +622,7 @@ chBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad
 	}
 }
 
-	#if !mobile
+		#if !mobile
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
 	{
 		var copyKeys:Array<FlxKey> = keys.copy();
