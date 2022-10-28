@@ -771,6 +771,7 @@ class Controls extends FlxActionSet
 		forEachBound(control, function(action, _) removeKeys(action, copyKeys));
 		#end
 	}
+	}
 	
 	public function unbindKeys(control:Control, keys:Array<FlxKey>)
 	{
