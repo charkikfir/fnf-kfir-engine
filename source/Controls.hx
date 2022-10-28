@@ -798,6 +798,7 @@ class Controls extends FlxActionSet
 			if (input.device == KEYBOARD && keys.indexOf(cast input.inputID) != -1)
 				action.remove(input);
 		}
+		}
 	}
 
 	public function setKeyboardScheme(scheme:KeyboardScheme, reset = true)
