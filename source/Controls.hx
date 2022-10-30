@@ -10,7 +10,6 @@ import flixel.input.actions.FlxActionSet;
 import flixel.input.gamepad.FlxGamepadButton;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
-#end
 #if mobile
 import mobile.flixel.FlxButton;
 import mobile.flixel.FlxHitbox;
