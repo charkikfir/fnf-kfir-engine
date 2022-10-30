@@ -382,6 +382,7 @@ class Controls extends FlxActionSet
 			scheme = None;
 		setKeyboardScheme(scheme, false);
 	}
+	}
 	#end
 
 chBound(Control.NOTE_RIGHT, (action, state) -> addbuttonNOTES(action, VirtualPad.buttonRight, state));
