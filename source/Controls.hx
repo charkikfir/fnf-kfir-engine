@@ -383,7 +383,8 @@ class Controls extends FlxActionSet
 	}
 	#end
 
-			#if mobile
+	
+	#if mobile
 	public var trackedinputsUI:Array<FlxActionInput> = [];
 	public var trackedinputsNOTES:Array<FlxActionInput> = [];
 
@@ -710,7 +711,7 @@ class Controls extends FlxActionSet
 		}
 	}
 
-	#if !mobile
+        	#if !mobile
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
 	{
 		var copyKeys:Array<FlxKey> = keys.copy();
@@ -757,15 +758,21 @@ class Controls extends FlxActionSet
 		#end
 	}	
 	#end
+
+		#if (haxe >= "4.0.0")
+		inline forEachBound(control, (action, _) -> removeKeys(action, copyKeys));
+		#else
+		forEachBound(control, function(action, _) removeKeys(action, copyKeys));
+		#end
 	}
-	//#else
+	#else
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
 	{
 		#if (haxe >= "4.0.0")
 		inline forEachBound(control, (action, state) -> addKeys(action, keys, state));
 		#else
 		forEachBound(control, function(action, state) addKeys(action, keys, state));
-		#end
+		#end	
 	}
 
 	public function unbindKeys(control:Control, keys:Array<FlxKey>)
@@ -774,42 +781,17 @@ class Controls extends FlxActionSet
 		inline forEachBound(control, (action, _) -> removeKeys(action, keys));
 		#else
 		forEachBound(control, function(action, _) removeKeys(action, keys));
-		}
-		#end
+		#end		
 	}	
-	#else
-
-	public function unbindKeys(control:Control, keys:Array<FlxKey>)
-	{
-		var copyKeys:Array<FlxKey> = keys.copy();
-		for (i in 0...copyKeys.length) {
-			if(i == NONE) copyKeys.remove(i);
-		}
-
-		#if (haxe >= "4.0.0")
-		inline forEachBound(control, (action, _) -> removeKeys(action, copyKeys));
-		#else
-		forEachBound(control, function(action, _) removeKeys(action, copyKeys));
-		#end
-	}
 	#end
-	
-	public function unbindKeys(control:Control, keys:Array<FlxKey>)
-	{
-		#if (haxe >= "4.0.0")
-		inline forEachBound(control, (action, _) -> removeKeys(action, keys));
-		#else
-		forEachBound(control, function(action, _) removeKeys(action, keys));	
-	}
+
 	inline static function addKeys(action:FlxActionDigital, keys:Array<FlxKey>, state:FlxInputState)
 	{
 		for (key in keys)
 			if(key != NONE)
 				action.addKey(key, state);
-				}
-				#end
-				}
-				#else
+	}
+
 	static function removeKeys(action:FlxActionDigital, keys:Array<FlxKey>)
 	{
 		var i = action.inputs.length;
@@ -819,8 +801,6 @@ class Controls extends FlxActionSet
 			if (input.device == KEYBOARD && keys.indexOf(cast input.inputID) != -1)
 				action.remove(input);
 		}
-		}
-		#end
 	}
 
 	public function setKeyboardScheme(scheme:KeyboardScheme, reset = true)
