@@ -1212,8 +1212,8 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
-		#if mobile
-		addmobileControls();
+		#if android
+		addAndroidControls();
 		#end
 
 		// if (SONG.song == 'South')
@@ -2066,8 +2066,8 @@ class PlayState extends MusicBeatState
 		if(ret != FunkinLua.Function_Stop) {
 			if (skipCountdown || startOnTime > 0) skipArrowStartTween = true;
 
-			#if mobile
-			mobileControls.visible = true;
+			#if android
+			androidControls.visible = true;
 			#end
 			generateStaticArrows(0);
 			generateStaticArrows(1);
@@ -3001,7 +3001,7 @@ class PlayState extends MusicBeatState
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		}
 
-		if (controls.PAUSE #if mobile || FlxG.mobile.justReleased.BACK #end && startedCountdown && canPause)
+		if (controls.PAUSE #if android || FlxG.android.justReleased.BACK #end && startedCountdown && canPause)
 		{
 			var ret:Dynamic = callOnLuas('onPause', [], false);
 			if(ret != FunkinLua.Function_Stop) {
@@ -3871,8 +3871,8 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		#if mobile
-		mobileControls.visible = false;
+		#if android
+		androidControls.visible = false;
 		#end
 		timeBarBG.visible = false;
 		timeBar.visible = false;
