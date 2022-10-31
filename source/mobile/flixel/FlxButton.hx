@@ -432,7 +432,7 @@ class FlxTypedButton<T:FlxSprite> extends FlxSprite implements IFlxInput
 	 */
 	function onUpHandler():Void
 	{
-		status = FlxButton.NORMAL;
+		status = FlxButton.HIGHLIGHT;
 		input.release();
 		currentInput = null;
 		onUp.fire(); // Order matters here, because onUp.fire() could cause a state change and destroy this object.
