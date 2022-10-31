@@ -120,7 +120,7 @@ class FunkinLua {
 		// Song/Week shit
 		set('curBpm', Conductor.bpm);
 		set('bpm', PlayState.SONG.bpm);
-        set('stage', PlayState.SONG.stage);
+                set('stage', PlayState.SONG.stage);
 		set('scrollSpeed', PlayState.SONG.speed);
 		set('crochet', Conductor.crochet);
 		set('stepCrochet', Conductor.stepCrochet);
@@ -568,7 +568,7 @@ class FunkinLua {
 							Lua.pushnumber(lua, Lua.tonumber(luaInstance.lua, -1));
 						}else if(Lua.isstring(luaInstance.lua,-1)){
 							Lua.pushstring(lua, Lua.tostring(luaInstance.lua, -1));
-						}else if(Lua.isboolean(luaInstance.lua,-1) != 0){
+						}else if(Lua.isboolean(luaInstance.lua,-1)){
 							Lua.pushboolean(lua, Lua.toboolean(luaInstance.lua, -1));
 						}else{
 							Lua.pushnil(lua);
@@ -1399,10 +1399,6 @@ class FunkinLua {
 		});
 		Lua_helper.add_callback(lua, "getHits", function() {
 			return PlayState.instance.songHits;
-		});
-
-Lua_helper.add_callback(lua, "setStage", function(value:String) {
-			PlayState.SONG.stage = value;
 		});
 
 		Lua_helper.add_callback(lua, "setHealth", function(value:Float = 0) {
