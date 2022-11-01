@@ -46,7 +46,7 @@ class Paths
 		'weeks',
 		'fonts',
 		'scripts',
-                'haxescript', 
+                'source_code', 
 		'achievements'
 	];
 	#end
