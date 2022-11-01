@@ -27,7 +27,7 @@ using StringTools;
 
 class Paths
 {
-	inline public static var SOUND_EXT = #if web "mp3" #else "ogg","mp3", "mid", "wav" #end;
+	inline public static var SOUND_EXT = #if web "mp3" #else "ogg","mp3", "mid", "wav"; #end;
 	inline public static var VIDEO_EXT = "mp4";
 
 	#if MODS_ALLOWED
