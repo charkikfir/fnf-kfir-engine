@@ -120,7 +120,7 @@ class FunkinLua {
 		// Song/Week shit
 		set('curBpm', Conductor.bpm);
 		set('bpm', PlayState.SONG.bpm);
-                set('stage', PlayState.SONG.stage);
+        set('stage', PlayState.SONG.stage);
 		set('scrollSpeed', PlayState.SONG.speed);
 		set('crochet', Conductor.crochet);
 		set('stepCrochet', Conductor.stepCrochet);
@@ -1659,6 +1659,9 @@ class FunkinLua {
 		});
 		Lua_helper.add_callback(lua, "setRatingName", function(value:String) {
 			PlayState.instance.ratingName = value;
+		});
+		Lua_helper.add_callback(lua, "changeStage", function(value:String) {
+			PlayState.instance.curstage = value;
 		});
 		Lua_helper.add_callback(lua, "setRatingFC", function(value:String) {
 			PlayState.instance.ratingFC = value;
