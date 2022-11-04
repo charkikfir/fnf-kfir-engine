@@ -1661,7 +1661,7 @@ class FunkinLua {
 			PlayState.instance.ratingName = value;
 		});
 		Lua_helper.add_callback(lua, "changeStage", function(value:String) {
-			PlayState.instance.curStage = value;
+			PlayState.curStage = value;
 		});
 		Lua_helper.add_callback(lua, "setRatingFC", function(value:String) {
 			PlayState.instance.ratingFC = value;
